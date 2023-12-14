@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget
+    id="mendix.datagridlearning.DataGridLearning"
+    pluginWidget="true"
+    needsEntityContext="true"
+    offlineCapable="true"
+    supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd"
+>
+    <name>Data Grid Learning</name>
+    <description>My widget description</description>
+    <icon />
+    <properties>
+        <propertyGroup caption="Grid">
+            <!--DataSource Type-->
+            <property key="productData" type="datasource" isList="true" required="false">
+                <caption>Product Data</caption>
+                <description>Product Data</description>
+            </property>
+            <!--Attribute Type and link it to Datasource-->
+            <property key="productName" type="attribute" required="false" dataSource="productData">
+                <caption>Product Name</caption>
+                <description>Product Name</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+             <property key="productPrice" type="attribute" required="false" dataSource="productData">
+                <caption>Product Price</caption>
+                <description>Product Price</description>
+                <attributeTypes>
+                    <attributeType name="Decimal" />
+                </attributeTypes>
+            </property>
+             <property key="productQuantity" type="attribute" required="false" dataSource="productData">
+                <caption>Product Quantity</caption>
+                <description>Product Quantity</description>
+                <attributeTypes>
+                    <attributeType name="Integer" />
+                </attributeTypes>
+            </property>
+            <property key="productCategory" type="attribute" required="false" dataSource="productData">
+                <caption>Product Category</caption>
+                <description>Product Category</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+            <property key="productActive" type="attribute" required="false" dataSource="productData">
+                <caption>Product Active</caption>
+                <description>Product Active</description>
+                <attributeTypes>
+                    <attributeType name="Boolean" />
+                </attributeTypes>
+            </property>
+             <property key="add" type="action">
+                <caption>Add Btn</caption>
+                <description>Add Btn</description>
+            </property>
+            <property key="edit" type="action">
+                <caption>Edit Btn</caption>
+                <description>Add Btn</description>
+            </property>
+            <property key="remove" type="action">
+                <caption>Remove Btn</caption>
+                <description>Add Btn</description>
+            </property>
+        </propertyGroup>
+          <propertyGroup caption="GridHelper">
+          <property key="payload" type="attribute" required="false">
+                <caption>Carries Data For Microflows</caption>
+                <description>Carries Data For Microflows</description>
+                <attributeTypes>
+                    <attributeType name="String"></attributeType>
+                </attributeTypes>
+            </property>
+          </propertyGroup>
+    </properties>
+</widget>

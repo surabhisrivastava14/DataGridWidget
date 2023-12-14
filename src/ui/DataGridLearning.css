@@ -1,0 +1,12 @@
+.data-grid-wrapper{
+    
+}
+.data-grid-header{
+    box-shadow: rgba(0,0,0,0,0.2) 0px 1px 3px 0px, rgba(27,31,35,0.15) 0px 0px 0xp 1px;
+}
+.data-grid-row{
+    background-color: #ffffff;
+}
+.data-grid-row:hover{
+    background-color: #ec26ec;
+}
